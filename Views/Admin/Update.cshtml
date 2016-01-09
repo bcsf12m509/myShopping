@@ -1,0 +1,59 @@
+﻿@model Shopaholics.Models.Item
+
+@{
+    ViewBag.Title = "Update";    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<body>
+
+    <div class="row">
+        <div class="col-xs-6">
+            @using (Html.BeginForm("Update1", "Admin", FormMethod.Post))
+            {
+                @Html.HiddenFor(m => m.Id)
+
+                @Html.LabelFor(m => m.Name)
+                @Html.EditorFor(m => m.Name)
+
+                <br />
+                <br />
+
+                @Html.LabelFor(m => m.Category)
+                @Html.EditorFor(m => m.Category)
+
+                <br />
+                <br />
+
+                @Html.LabelFor(m => m.Price)
+                @Html.EditorFor(m => m.Price)
+
+                <br />
+                <br />
+
+
+                @Html.LabelFor(m => m.Stock)
+                @Html.EditorFor(m => m.Stock)
+
+                <br />
+                <br />
+
+
+                @Html.LabelFor(m => m.Image)
+                @Html.EditorFor(m => m.Image)
+
+                <br />
+                <br />
+
+                @Html.LabelFor(m => m.Description)
+                @Html.EditorFor(m => m.Description)
+
+                <br />
+                <br />
+
+                <input type="submit" value="Confirm Update" />
+
+            }
+        </div>
+    </div>
+</body>

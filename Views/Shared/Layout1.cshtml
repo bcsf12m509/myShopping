@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "Layout1";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <style>
+        #header {
+            background-color: peachpuff;
+            color: maroon;
+            text-align: center;
+            padding: 5px;
+        }
+
+        #nav {
+            line-height: 30px;
+            background-color: peachpuff;
+            color: maroon;
+            height: 1800px;
+            width: 150px;
+            float: left;
+            padding: 5px;
+        }
+
+        #aside {
+            line-height: 30px;
+            background-color: peachpuff;
+            color: maroon;
+            height: 1800px;
+            width: 200px;
+            float: right;
+            padding: 5px;
+        }
+
+
+
+        #section {
+            width: 800px;
+            height: 400px;
+            color: maroon;
+            padding: 10px;
+        }
+
+
+
+        h2 {
+            font-family: mistral;
+            font-size: 300%;
+        }
+
+        h4 {
+            font-family: mistral;
+            font-size: 200%;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header" style="background-color: honeydew; color: darkslateblue;">
+            <a class=" navbar-brand" href="#">
+                Shopaholics.pk
+            </a>
+        </div>
+        <div style="background-color:coral; color:darkslateblue;">
+            <ul class="nav navbar-nav pull-left">
+                <li> <a href="http://localhost:12767/Home/Login" type="new">Admin</a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+
+                <li> <a href="http://localhost:12767/Home/Index" type="new">Home</a></li>
+                <li> <a href="http://localhost:12767/Home/Services" type="new">Services</a></li>
+                <li> <a href="http://localhost:12767/Home/About" type="new">About Us</a></li>
+                <li> <a href="http://localhost:12767/Home/Contact" type="new">Contact Us</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="header">
+        <ul class="nav navbar-nav pull-left">
+       
+            <li style="background-color:peachpuff ; color:black ; font-family:'Californian FB'; font-size:medium;"> <a href="http://localhost:12767/Home/Index" type="new">SignOut</a></li>
+        </ul>
+        <h2>Welcome Shopaholics!</h2>
+        
+
+    </div>
+
+    @RenderBody()
+
+    <div class="navbar-fixed-bottom">
+        <footer style="background-color: peachpuff; color: maroon; text-align: end; padding: 5px;">
+            Customer Service 0321-4166664 | 0321-4577778 | Copyright © 2015 shopaholics.pk. All Rights Reserved.
+        </footer>
+    </div>
+
+</body>
+</html>

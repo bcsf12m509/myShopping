@@ -1,0 +1,36 @@
+﻿@using Shopaholics.Models
+
+@{
+    ViewBag.Title = "Empty";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+ }
+<body>
+    <div id="nav">
+        <h4>CATEGORIES</h4>
+        @foreach (var i in Model)
+        {
+
+            <a href='@Url.Action("Category", "Home", new { CategoryName=@i.Name } )'> @i.Name </a><br><br />
+
+        }
+        </div>
+
+        <div id="section">
+
+            <p style="text-align: center;">
+                <span style="line-height: 1.3em;">
+                    No Items present under this category/search.
+                </span>
+            </p>
+            <br />
+
+
+
+
+
+
+        </div>
+
+
+</body>
+

@@ -1,0 +1,72 @@
+﻿@using Shopaholics.Models
+
+@{
+    ViewBag.Title = "Category";
+ Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div id="nav">
+        <h4>CATEGORIES</h4>
+       @foreach(var i in ViewBag.List)
+    {
+
+        <a href='@Url.Action("Category", "Home", new{CategoryName=@i.Name} )'> @i.Name </a><br><br />
+      
+
+
+    }
+        @*<a href="http://localhost:12767/Home/Men">Men</a><br><br />
+        <a href="http://localhost:12767/Home/Women">Women</a><br><br />
+        <a href="http://localhost:12767/Home/Kids">Kids</a><br><br />
+        <a href="http://localhost:12767/Home/HouseHold">HouseHold</a><br><br />*@
+    </div>
+    <div id="aside">
+        <form action="http://localhost:12767/Home/SearchItem" method="post">
+            <input type="search" placeholder="search items here" name="search" style="font-family:'Arial Rounded MT'; font-size:medium; " />
+            <span class="glyphicon glyphicon-search" aria-hidden="true" />
+            <input type="submit" value="Search" style="width:70px; height:35px ; text-align:center" />
+
+        </form>
+    </div>
+
+   
+    <div id="section">
+        <h2> ViewBag.Cat </h2>
+        <p style="text-align: center;">
+            <span style="line-height: 1.3em;">
+                Providing wide range of clothing, accessories and household to buy online.
+            </span>
+        </p>
+        <br />
+
+
+
+
+        @foreach (var i in Model)
+        {
+
+            <div class="col-md-4">
+                <div class="item">
+                    <img src="..@i.Image" alt="@i.Description" style="width:200px;height:120px">
+                </div>
+                <div>
+                    <p class="navbar-text">Rs @i.Price | Stock: @i.Stock</p>
+                </div>
+                <div class="desc">
+                    <a href='@Url.Action("Index", "Customer", new { ItemId= @i.Id } )'>
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+        }
+    </div>
+
+
+</body>
+          

@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Search1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Shopaholics.Models.Item
+<body>
+    Item found successfully. 
+
+    <div id="section">
+        Item ID: @Model.Id <br/>
+        Item Name: @Model.Name <br />
+        Item Category:  @Model.Category <br />
+        Item Price: @Model.Price <br  />
+        Item Stock: @Model.Stock <br />
+        Item Description: @Model.Description <br />
+
+    
+        @using (Html.BeginForm("Update", "Admin", FormMethod.Post))
+        {
+            @Html.HiddenFor(m=>m.Id)
+            @Html.HiddenFor(m=>m.Name)
+            @Html.HiddenFor(m=>m.Category)
+            @Html.HiddenFor(m=>m.Price)
+            @Html.HiddenFor(m=>m.Stock)
+            @Html.HiddenFor(m=>m.Description)
+            @Html.HiddenFor(m=>m.Image)
+
+
+            <input type="submit" value="Update" />
+        }
+
+        @using (Html.BeginForm("Delete", "Admin", FormMethod.Post))
+        {
+
+    @Html.HiddenFor(m=>m.Id)
+    @Html.HiddenFor(m=>m.Name)
+    @Html.HiddenFor(m=>m.Category)
+    @Html.HiddenFor(m=>m.Price)
+    @Html.HiddenFor(m=>m.Stock)
+    @Html.HiddenFor(m=>m.Description)
+    @Html.HiddenFor(m=>m.Image)
+            <input type="submit" value="Delete" />
+        }
+    </div>
+
+</body>

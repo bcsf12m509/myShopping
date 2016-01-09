@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body >
+     <h2 >Login</h2 >
+    <p style ="text-align: center;">
+        <span style="line-height: 1.3em;">
+            Login to your Admin panel.
+            </span>
+            </p>
+            <div id="nav">
+                <form method=GET action="http://localhost:12767/Admin/SignIn" >
+                    <br>
+                    Email id: <input type="email" name="email" style="font-size:medium" autocomplete="on" required /> <br />
+                    Password: <input type="password" name="password" style="font-size:medium" required /> <br />
+                    <input type="submit" value="Login" />
+                </form>
+</div>
+
+</body>

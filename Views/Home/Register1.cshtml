@@ -1,0 +1,179 @@
+﻿@using Shopaholics.Models
+
+@{
+    ViewBag.Title = "Register1";
+    Layout = "~/Views/Shared/Layout1.cshtml";
+}
+<body>
+    
+
+    <div id="nav">
+       
+    </div>
+
+    <div id="aside">
+        <form action="http://localhost:12767/Home/SearchItem" method="post">
+            <input type="search" placeholder="search items here" name="search" style="font-family:'Arial Rounded MT'; font-size:medium; " />
+            <span class="glyphicon glyphicon-search" aria-hidden="true" />
+            <input type="submit" value="Search" style="width:70px; height:35px ; text-align:center" />
+
+        </form>
+    </div>
+
+    <div id="section">
+        <h2>Discount Deals</h2><br />
+        <p style="text-align: center;">
+            <span style="line-height: 1.3em;">
+                Providing wide range of discount offers and deals to avail online daily.
+            </span>
+        </p>
+        <br />
+
+        @foreach(var i in Model)
+        {
+
+    <div class="col-md-4">
+        <div class="item">
+            <img src="@i.Image" alt="@i.Description" style="width:200px;height:120px;border:0">
+        </div>
+        <div>
+            <p class="navbar-text">Rs @i.Price | Stock: @i.Stock</p>
+        </div>
+        <div class="desc">
+            <a href='@Url.Action("Index", "Customer", new { ItemId= @i.Id } )'>
+                <button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                </button><br />
+            </a>
+        </div>
+    </div>
+        }
+
+        @*<div class="row">
+            <div class="col-md-5">
+
+                <div class="item">
+                    <img src="~/Images/dd1.jpg" alt="Naked-set of 3" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                   <p class="navbar-text">Set of all 3 naked palettes</p><br />
+                    <p class="navbar-text">Was:Rs 6,800  Now:Rs 5,500</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/dd2.jpg" alt="3in1 hair styling set" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Set of 3 in 1 hair styler</p><br />
+                    <p class="navbar-text">Was:Rs 5,000  Now:Rs 4,500</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/dd3.jpg" alt="stitched attire" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Stitched cotton kurta</p><br />
+                    <p class="navbar-text">Was:Rs 1,800  Now:Rs 1,500</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/dd4.jpg" alt="khaadi unstitched suit" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Khaadi unstitched suit(1st copy)</p><br />
+                    <p class="navbar-text">Was:Rs 5,000  Now:Rs 4,500</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/dd5.jpg" alt="watch for her" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Elegant ladies' watch</p><br />
+                    <p class="navbar-text">Was:Rs 4,000  Now:Rs 3,200</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/dd6.jpg" alt="clutches" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Buy any 3 clutches</p><br />
+                    <p class="navbar-text">Was:Rs 5,500  Now:Rs 3,000</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/dd7.jpg" alt="6in1 epilator" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">6 in 1 hair remover/ epilator</p><br />
+                    <p class="navbar-text">Was:Rs 6,000  Now:Rs 5,000</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+        </div>*@
+    </div>
+
+
+</body>
+

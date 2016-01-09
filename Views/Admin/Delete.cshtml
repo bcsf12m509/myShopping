@@ -1,0 +1,33 @@
+﻿@model Shopaholics.Models.Item
+
+@{
+    ViewBag.Title = "Delete";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+
+    <p style="text-align: center;">
+        <span style="line-height: 1.3em;">
+            Are you sure you want to delete the Item?
+        </span>
+    </p>
+    <div id="Section">
+        @using (Html.BeginForm("Delete1", "Admin", FormMethod.Post))
+        {
+            @Html.HiddenFor(m=>m.Id)
+            @Html.HiddenFor(m=>m.Name)
+            @Html.HiddenFor(m=>m.Category)
+            @Html.HiddenFor(m=>m.Price)
+            @Html.HiddenFor(m=>m.Stock)
+            @Html.HiddenFor(m=>m.Description)
+            @Html.HiddenFor(m=>m.Image)
+            @Html.HiddenFor(m=>m.Category1)
+            @Html.HiddenFor(m=>m.Orders)
+            
+            <input type="submit" value="Confirm Delete" />
+        }
+
+    </div>
+
+</body>

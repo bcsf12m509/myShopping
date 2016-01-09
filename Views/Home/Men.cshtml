@@ -1,0 +1,209 @@
+﻿@using Shopaholics.Models
+
+@{
+    
+    ViewBag.Title = "Men";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div id="nav">
+        <h4>CATEGORIES</h4>
+        <a href="http://localhost:12767/Home/Men">Men</a><br><br />
+        <a href="http://localhost:12767/Home/Women">Women</a><br><br />
+        <a href="http://localhost:12767/Home/Kids">Kids</a><br><br />
+        <a href="http://localhost:12767/Home/HouseHold">HouseHold</a><br><br />
+    </div>
+    <div id="aside">
+        <form action="http://localhost:12767/Home/SearchItem" method="post">
+            <span class="glyphicon glyphicon-search" aria-hidden="true" />
+            <input type="search" placeholder="search items here" name="search" />
+            <input type="submit" value="Search" />
+
+        </form>
+    </div>
+
+    <div id="section">
+        <h2>MEN</h2>
+
+        
+        <p style="text-align: center;">
+            <span style="line-height: 1.3em;">
+                Providing wide range of men's clothing and accessories to buy online.
+            </span>
+        </p>
+        <br />
+
+        @foreach(var i in Model)
+        { 
+        
+            <div class="col-md-4">
+                <div class="item">
+                    <img src="@i.Image" alt="@i.Description" style="width:200px;height:120px;border:0">
+                </div>
+                <div >
+                    <p class="navbar-text" >Rs @i.Price</p>
+                    <p class="navbar-text">Stock: @i.Stock</p>
+                </div>
+                <div class="desc">
+                    <a href='@Url.Action("Index", "Customer", new { ItemId=@i.Id } )'>
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+                 
+        }
+        </div>
+
+
+</body>
+          
+
+            @*<div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/m2.jpg" alt="t-shirt" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Rs 750</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+
+                <div class="item">
+                    <img src="~/Images/m3.jpg" alt="t-shirt" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Rs 950</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/m4.jpg" alt="t-shirt" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Rs 1,000</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>*@
+        @*</div>
+
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/w1.jpg" alt="watch" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Rs 5,500</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/w2.jpg" alt="watch" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Rs 3,200</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/w3.jpg" alt="watch" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Rs 4,000</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/w4.jpg" alt="watch" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Rs 6,000</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="item">
+                    <img src="~/Images/w5.jpg" alt="watch" style="width:200px;height:120px;border:0">
+                </div>
+                <div>
+                    <p class="navbar-text">Rs 6,500</p>
+                </div>
+                <div class="desc">
+                    <a href="http://localhost:12767/Customer/Index">
+                        <button type="button" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">AddToCart</span>
+                        </button><br />
+                    </a>
+                </div>
+                </div>
+            </div>*@
+
+
+
+       

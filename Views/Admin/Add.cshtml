@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <form method=GET action="http://localhost:12767/Admin/Add1" enctype="multipart/form-data">
+                Name <input type="text" placeholder="Name" name="Name" required />
+                <br />
+                <br />
+
+                Category<input type="text" placeholder="Category" name="Category" required />
+                <br />
+                <br />
+
+                Price<input type="text" placeholder="Price" name="Price" required />
+                <br />
+                <br />
+
+
+                Stock<input type="text" placeholder="Stock value" name="Stock" required />
+                <br />
+                <br />
+
+                Image<input type="file" placeholder="Image link" name="Image" required />
+                <br />
+                <br />
+
+                Description<input type="text" placeholder="Description" name="Description" />
+                <br />
+                <br />
+
+                <input type="submit" value="Add" />
+
+            </form>
+            </div>
+        </div>
+</body>

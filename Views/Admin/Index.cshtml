@@ -1,0 +1,270 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout1.cshtml";
+   
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap Styles-->
+    <link href="~/Content/NewFolder1/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="~/Content/NewFolder1/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="~/Scripts/NewFolder1/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="~/Content/NewFolder1/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Admin</a>
+            </div>
+
+          
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i>Categories<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#" name="Men">Men<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="http://localhost:12767/Home/Category">View Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Add">Add Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Update Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Delete Items</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" name="Women">Women<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="http://localhost:12767/Home/Category">View Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Add">Add Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Update Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Delete Items</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" name="Kids">Kids<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="http://localhost:12767/Home/Category">View Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Add">Add Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Update Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Delete Items</a>
+                                    </li>
+                                    
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" name="HouseHold">Household<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="http://localhost:12767/Home/Category">View Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Add">Add Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Update Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Delete Items</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" name="Deals" >Deals<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="http://localhost:12767/Home/Category" name="Deals" >View Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Add">Add Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Update Items</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:12767/Admin/Search">Delete Items</a>
+                                    </li>
+                                    
+                                </ul>
+
+                            </li>
+                            <li>
+                                <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i>Add New Category</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i>Orders <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">View Orders</a>
+                            </li>
+                            <li>
+                                <a href="#">Delete Orderss</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+
+                    <li>
+                        <a href="empty.html"><i class="fa fa-fw fa-file"></i>Customers<span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">View Registered Customers</a>
+                            </li>
+                            <li>
+                                <a href="#">Delete Customers</a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Dashboard <small>Summary of your App</small>
+                        </h1>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-green">
+                            <div class="panel-body">
+                                <i class="fa fa-bar-chart-o fa-5x"></i>
+                                <h3>5</h3>
+                            </div>
+                            <div class="panel-footer back-footer-green">
+                                Categories
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <i class="fa fa-shopping-cart fa-5x"></i>
+                                <h3>7</h3>
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                                Customers
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-red">
+                            <div class="panel-body">
+                                <i class="fa fa fa-comments fa-5x"></i>
+                                <h3>54</h3>
+                            </div>
+                            <div class="panel-footer back-footer-red">
+                                Items
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-brown">
+                            <div class="panel-body">
+                                <i class="fa fa-users fa-5x"></i>
+                                <h3>60</h3>
+                            </div>
+                            <div class="panel-footer back-footer-brown">
+                                Orders
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="~/Scripts/NewFolder1/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="~/Scripts/NewFolder1/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="~/Scripts/NewFolder1/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="~/Scripts/NewFolder1/morris/raphael-2.1.0.min.js"></script>
+    <script src="~/Scripts/NewFolder1/morris/morris.js"></script>
+    <!-- Custom Js -->
+    <script src="~/Scripts/NewFolder1/custom-scripts.js"></script>
+
+
+</body>
+
+</html>
